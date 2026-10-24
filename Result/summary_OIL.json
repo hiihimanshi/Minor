@@ -1,0 +1,253 @@
+{
+ "dataset": "OIL",
+ "real_data": true,
+ "n_series": 2000,
+ "n_months": 55,
+ "train": 43,
+ "test": 12,
+ "categories": {
+  "Intermittent": 1694,
+  "Lumpy": 306
+ },
+ "accuracy": {
+  "MA": {
+   "MASE": 0.751,
+   "RMSSE": 0.512,
+   "bias": 0.119
+  },
+  "Croston": {
+   "MASE": 1.034,
+   "RMSSE": 0.582,
+   "bias": 0.674
+  },
+  "SBA": {
+   "MASE": 1.001,
+   "RMSSE": 0.573,
+   "bias": 0.606
+  },
+  "TSB": {
+   "MASE": 0.819,
+   "RMSSE": 0.504,
+   "bias": 0.272
+  },
+  "LightGBM": {
+   "MASE": 0.878,
+   "RMSSE": 0.539,
+   "bias": 0.363
+  },
+  "Adaptive": {
+   "MASE": 0.798,
+   "RMSSE": 0.502,
+   "bias": 0.223
+  }
+ },
+ "inventory": [
+  {
+   "policy": "Flat",
+   "method": "MA",
+   "holding": 181144.8,
+   "shortage": 84491.4,
+   "total_cost": 265636.2,
+   "fill_rate_%": 65.7,
+   "stockout_months": 962
+  },
+  {
+   "policy": "Flat",
+   "method": "Croston",
+   "holding": 184928.4,
+   "shortage": 71213.2,
+   "total_cost": 256141.6,
+   "fill_rate_%": 67.9,
+   "stockout_months": 978
+  },
+  {
+   "policy": "Flat",
+   "method": "SBA",
+   "holding": 180586.2,
+   "shortage": 73883.8,
+   "total_cost": 254469.9,
+   "fill_rate_%": 67.1,
+   "stockout_months": 996
+  },
+  {
+   "policy": "Flat",
+   "method": "TSB",
+   "holding": 170145.7,
+   "shortage": 84075.9,
+   "total_cost": 254221.5,
+   "fill_rate_%": 67.8,
+   "stockout_months": 991
+  },
+  {
+   "policy": "Flat",
+   "method": "LightGBM",
+   "holding": 174549.7,
+   "shortage": 83688.3,
+   "total_cost": 258238.0,
+   "fill_rate_%": 66.3,
+   "stockout_months": 1032
+  },
+  {
+   "policy": "Flat",
+   "method": "Adaptive",
+   "holding": 172223.4,
+   "shortage": 83273.8,
+   "total_cost": 255497.2,
+   "fill_rate_%": 67.1,
+   "stockout_months": 1004
+  },
+  {
+   "policy": "Criticality-aware",
+   "method": "MA",
+   "holding": 167658.1,
+   "shortage": 76666.2,
+   "total_cost": 244324.3,
+   "fill_rate_%": 62.7,
+   "stockout_months": 1115
+  },
+  {
+   "policy": "Criticality-aware",
+   "method": "Croston",
+   "holding": 169229.9,
+   "shortage": 61299.4,
+   "total_cost": 230529.3,
+   "fill_rate_%": 63.5,
+   "stockout_months": 1116
+  },
+  {
+   "policy": "Criticality-aware",
+   "method": "SBA",
+   "holding": 165093.0,
+   "shortage": 63443.7,
+   "total_cost": 228536.6,
+   "fill_rate_%": 62.6,
+   "stockout_months": 1135
+  },
+  {
+   "policy": "Criticality-aware",
+   "method": "TSB",
+   "holding": 156363.1,
+   "shortage": 74879.5,
+   "total_cost": 231242.6,
+   "fill_rate_%": 65.1,
+   "stockout_months": 1141
+  },
+  {
+   "policy": "Criticality-aware",
+   "method": "LightGBM",
+   "holding": 159300.9,
+   "shortage": 73784.5,
+   "total_cost": 233085.4,
+   "fill_rate_%": 61.6,
+   "stockout_months": 1202
+  },
+  {
+   "policy": "Criticality-aware",
+   "method": "Adaptive",
+   "holding": 158973.5,
+   "shortage": 73500.6,
+   "total_cost": 232474.0,
+   "fill_rate_%": 64.2,
+   "stockout_months": 1162
+  }
+ ],
+ "rank_corr_acc_cost": 0.2,
+ "equal_service": {
+  "MA": {
+   "cost @ fill 38.1%": 261674.0,
+   "cost @ fill 59.9%": 257085.0,
+   "cost @ fill 81.7%": 424315.0,
+   "mean_rank": 5.0
+  },
+  "Croston": {
+   "cost @ fill 38.1%": 258538.0,
+   "cost @ fill 59.9%": 249445.0,
+   "cost @ fill 81.7%": 344309.0,
+   "mean_rank": 2.33
+  },
+  "SBA": {
+   "cost @ fill 38.1%": 258145.0,
+   "cost @ fill 59.9%": 249160.0,
+   "cost @ fill 81.7%": 349975.0,
+   "mean_rank": 2.0
+  },
+  "TSB": {
+   "cost @ fill 38.1%": 257262.0,
+   "cost @ fill 59.9%": 245099.0,
+   "cost @ fill 81.7%": 366268.0,
+   "mean_rank": 2.0
+  },
+  "LightGBM": {
+   "cost @ fill 38.1%": 259225.0,
+   "cost @ fill 59.9%": 251887.0,
+   "cost @ fill 81.7%": 355495.0,
+   "mean_rank": 3.67
+  }
+ },
+ "sensitivity_best_method": "TSB",
+ "sensitivity": [
+  {
+   "shortage_cost_x": 0.5,
+   "lead_time_x": 0.5,
+   "Flat": 188422.0,
+   "Criticality-aware": 160134.0,
+   "saving_%": 15.0
+  },
+  {
+   "shortage_cost_x": 0.5,
+   "lead_time_x": 1.0,
+   "Flat": 212184.0,
+   "Criticality-aware": 174563.0,
+   "saving_%": 17.7
+  },
+  {
+   "shortage_cost_x": 0.5,
+   "lead_time_x": 1.5,
+   "Flat": 237775.0,
+   "Criticality-aware": 190607.0,
+   "saving_%": 19.8
+  },
+  {
+   "shortage_cost_x": 1.0,
+   "lead_time_x": 0.5,
+   "Flat": 243104.0,
+   "Criticality-aware": 223760.0,
+   "saving_%": 8.0
+  },
+  {
+   "shortage_cost_x": 1.0,
+   "lead_time_x": 1.0,
+   "Flat": 254222.0,
+   "Criticality-aware": 231243.0,
+   "saving_%": 9.0
+  },
+  {
+   "shortage_cost_x": 1.0,
+   "lead_time_x": 1.5,
+   "Flat": 271247.0,
+   "Criticality-aware": 246387.0,
+   "saving_%": 9.2
+  },
+  {
+   "shortage_cost_x": 2.0,
+   "lead_time_x": 0.5,
+   "Flat": 352467.0,
+   "Criticality-aware": 317647.0,
+   "saving_%": 9.9
+  },
+  {
+   "shortage_cost_x": 2.0,
+   "lead_time_x": 1.0,
+   "Flat": 338297.0,
+   "Criticality-aware": 308955.0,
+   "saving_%": 8.7
+  },
+  {
+   "shortage_cost_x": 2.0,
+   "lead_time_x": 1.5,
+   "Flat": 338192.0,
+   "Criticality-aware": 319021.0,
+   "saving_%": 5.7
+  }
+ ]
+}

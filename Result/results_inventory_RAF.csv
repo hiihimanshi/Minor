@@ -1,0 +1,13 @@
+policy,method,holding,shortage,total_cost,fill_rate_%,stockout_months
+Flat,MA,236832.7,62605.5,299438.1,53.9,825
+Flat,Croston,230582.8,44589.0,275171.8,65.1,559
+Flat,SBA,226102.9,46165.8,272268.7,64.2,581
+Flat,TSB,217801.8,60240.4,278042.2,58.7,713
+Flat,LightGBM,216787.3,45024.0,261811.4,63.9,589
+Flat,Adaptive,216787.3,45024.0,261811.4,63.9,589
+Criticality-aware,MA,215196.2,58916.3,274112.4,50.9,888
+Criticality-aware,Croston,208952.4,41247.6,250200.0,61.8,611
+Criticality-aware,SBA,204599.0,42671.1,247270.1,60.9,630
+Criticality-aware,TSB,196760.2,57191.3,253951.5,55.7,754
+Criticality-aware,LightGBM,195933.6,41338.9,237272.5,60.4,639
+Criticality-aware,Adaptive,195933.6,41338.9,237272.5,60.4,639
